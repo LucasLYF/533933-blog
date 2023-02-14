@@ -876,14 +876,12 @@ inject:
     </style>
   bottom:
     <video muted loop id="bgvid">
-      <source src="/533933/video/1.mp4" type="video/mp4">
-      <source src="/533933/video/2.ogg" type="video/ogg">
-      <source src="/533933/video/3.webm" type="video/webm"
+      <source src="/533933/video/1.webm" type="video/webm">
     </video>
     <script>
       document.addEventListener("click",function(){document.getElementById('bgvid').play()})
     </script>
-    <audio id="audio" loop="loop" src="https://web.opendrive.com/api/v1/download/file.json/MzZfNTMwNTc2ODlf?inline=1">
+    <audio id="audio" loop="loop" src="https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/audio/2170340993.flac">
 		</audio>
     <script>
       var video=document.getElementById('bgvid');
