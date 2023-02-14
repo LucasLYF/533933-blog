@@ -881,7 +881,7 @@ inject:
     <script>
       document.addEventListener("click",function(){document.getElementById('bgvid').play()})
     </script>
-    <audio id="audio" loop="loop" src="https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/audio/2170340993.flac">
+    <audio id="audio" loop="loop" src="https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/audio/2170340993.mp3">
 		</audio>
     <script>
       var video=document.getElementById('bgvid');
