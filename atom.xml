@@ -6,7 +6,7 @@
   <link href="http://lucaslyf.gitee.io/533933/atom.xml" rel="self"/>
   
   <link href="http://lucaslyf.gitee.io/533933/"/>
-  <updated>2023-02-14T17:39:00.168Z</updated>
+  <updated>2023-02-14T17:47:23.298Z</updated>
   <id>http://lucaslyf.gitee.io/533933/</id>
   
   <author>
@@ -17,23 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Lucrame:(二)项目结构</title>
+    <title>2021年五一节</title>
     <link href="http://lucaslyf.gitee.io/533933/2023/02/15/2021%E5%B9%B4%E4%BA%94%E4%B8%80%E8%8A%82/"/>
     <id>http://lucaslyf.gitee.io/533933/2023/02/15/2021%E5%B9%B4%E4%BA%94%E4%B8%80%E8%8A%82/</id>
     <published>2023-02-15T15:40:31.000Z</published>
-    <updated>2023-02-14T17:39:00.168Z</updated>
+    <updated>2023-02-14T17:47:23.298Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;Lucrame跨平台应用框架利用QT插件特性，以<code>插件</code>的形式将功能模块化，方便后期拓展。本章节将详细介绍Lucrame-SDK开发包的目录结构，也希望各位开发者能够按照这样的文件结构进行开发（当然也可以自己设计合适的项目文件结构）。</p><h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><h2 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h2><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">-|--Lucrame-SDK #开发包文件夹。    +|--include #开发时需要，第三方库头文件。    +|--lib #开发时需要，第三方库文件。    +|--plugins #开发、发布时均需要，插件文件夹。    -|--src #项目源码文件夹        -|--Lucrame #应用框架程序源码            +|--CuteLogger (&#96;已移除&#96;)#第三方日志源码（LGPL开源协议），非必需。            +|--drmingw (&#96;已移除&#96;)#一个应用于Win的即时调试器，程序崩溃时抛出错误信息，建议保留。            +|--icons #存放资源文件（图片、.qrc、主题设置文件等）.            +|--packaging #存放应用信息及应用图标。            +|--Frame #主框架源码文件（.h&#x2F;.cpp&#x2F;.ui），以及项目设置文件（.pro&#x2F;.pri）。             |--Lucrame.pri #QT版本匹配，也可以将头文件引用等放入此处。             |--Lucrame.pro #项目设置文件，添加源文件、资源文件、链接第三方库等操作（相当于CMakeLists.txt）。        +|--Plugins #插件开发源码(文件结构和应用框架类似，.pro文件略有不同，后续详述)。        +|--RobotCAM #内核开发源码(文件结构和插件框架类似，.pro文件略有不同，后续详述)。     |--.dll&#x2F;.exe&#x2F;.ini&#x2F;... #必要库文件，开发、发布时均需要。</code></pre><h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">-|--Lucrame-SDK #开发包文件夹    -|--Contents #标准bundle文件结构        +|--_CodeSignature #一般为AppStore上架程序包含，内含数字签名防止非法篡改。        +|--Frameworks #放置了该应用所引用的第三方库.dylib（可以理解为Win平台的dll动态链接库）。        +|--MacOS #内涵可执行文件（相当于Win平台的.exe）以及.ini配置文件。        +|--Plugins #插件文件夹，内涵.so(bundle)和.dylib，.so其实算是类Unix系统动态链接库的另一个格式。        +|--Resources #资源文件，包含应用图标、图片、语言包等各种文件。         |--Info.plist #包含程序基本信息，标准的XML文档。         |--PkgInfo #可选的8字节文件，保存程序类型和开发者签名（也可以写在.plist中）。    -|--src #项目源码文件夹        -|--Lucrame #应用框架程序源码            +|--CuteLogger (&#96;已移除&#96;)#第三方日志源码（LGPL开源协议），非必需。            +|--drmingw (&#96;已移除&#96;)#一个应用于Win的即时调试器，程序崩溃时抛出错误信息，建议保留。            +|--icons #存放资源文件（图片、.qrc、主题设置文件等）.            +|--packaging #存放应用信息及应用图标。            +|--Frame #主框架源码文件（.h&#x2F;.cpp&#x2F;.ui），以及项目设置文件（.pro&#x2F;.pri）。             |--Lucrame.pri #QT版本匹配，也可以将头文件引用等放入此处。             |--Lucrame.pro #项目设置文件，添加源文件、资源文件、链接第三方库等操作（相当于CMakeLists.txt）。        +|--Plugins #插件开发源码(文件结构和应用框架类似，.pro文件略有不同，后续详述)。        +|--RobotCAM #内核开发源码(文件结构和插件框架类似，.pro文件略有不同，后续详述)。     |--.dylib&#x2F;.a&#x2F;... #必要库文件，开发、发布时均需要。</code></pre><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">(&#96;待完善&#96;)</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;Test。</p><p><img src="https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/img/IMG_2374%EF%BC%88%E8%B0%83%E8%89%B2%EF%BC%89.jpg" alt="民宿合照"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;Lucrame跨平台应用框架利用QT插件特性，以&lt;code&gt;插件&lt;/code&gt;的形式将功能模块化，方便后期拓展。本章</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;Test。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://tuchuang-1316863656.cos.ap-</summary>
       
     
     
     
-    <category term="Lucrame-插件式应用框架" scheme="http://lucaslyf.gitee.io/533933/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
+    <category term="丹丹逮到飞飞啦" scheme="http://lucaslyf.gitee.io/533933/categories/%E4%B8%B9%E4%B8%B9%E9%80%AE%E5%88%B0%E9%A3%9E%E9%A3%9E%E5%95%A6/"/>
     
     
   </entry>
