@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 533❤️933
+subtitle: '浮生万千，幸会矣！'
+description: '作者个人账号'
 keywords:
-author: John Doe
+author: 人是鳄鱼的子孙
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://lucaslyf.gitee.io/533933/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -39,8 +39,8 @@ external_link:
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
-render_drafts: false
-post_asset_folder: false
+render_drafts: true
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -51,8 +51,8 @@ highlight:
   wrap: true
   hljs: false
 prismjs:
-  enable: false
-  preprocess: true
+  enable: true
+  preprocess: false
   line_number: true
   tab_replace: ''
 
@@ -97,9 +97,23 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
+
+# Security
+encrypt: # hexo-blog-encrypt
+  enable: true
+  message: 您好，这里需要输入密码。
+  wrong_pass_message: 抱歉，您输入的密码不对，请联系作者获取权限。
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@gitee.com:lucaslyf/533933.git
+  branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
