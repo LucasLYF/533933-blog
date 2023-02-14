@@ -875,7 +875,7 @@ inject:
         video{display:block;}
     </style>
   bottom:
-    <video muted loop id="bgvid">
+    <video muted loop poster="img/第一帧.png" id="bgvid">
       <source src="/533933/video/1.webm" type="video/webm">
     </video>
     <script>
