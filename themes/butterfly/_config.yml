@@ -863,30 +863,37 @@ inject:
         {margin:0;
         padding:0}
         video#bgvid{
+        z-index:-100;
         position:fixed;
-        right:0;
-        top:0;
+        top:50%;
+        left:50%;
         min-width:100%;
         min-height:100%;
         width:auto;
         height:auto;
-        z-index:-100;
+        -ms-transform:translateX(-50%) translateY(-50%);
+        -webkit-transform:translateX(-50%) translateY(-50%);
+        transform:translateX(-50%) translateY(-50%);
         background-size:cover;}
         video{display:block;}
     </style>
   bottom:
-    <video muted loop poster="img/第一帧.jpg" id="bgvid">
-      <source src="/533933/video/1.webm" type="video/webm">
+    <video muted loop id="bgvid" x5-playsinline="" playsinline="" webkit-playsinline="">
     </video>
     <script>
-      document.addEventListener("click",function(){document.getElementById('bgvid').play()})
+      if(window.screen.availWidth<768){
+        document.getElementById('bgvid').poster = "img/第一帧_手机.jpg";
+        document.getElementById('bgvid').src = "https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/video/2.mp4";
+      }else{
+        document.getElementById('bgvid').poster = "img/第一帧_电脑.jpg";
+        document.getElementById('bgvid').src = "https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/video/1.mp4";
+      };
+      document.addEventListener("click",function(){document.getElementById('bgvid').play()});
     </script>
     <audio id="audio" loop="loop" src="https://tuchuang-1316863656.cos.ap-guangzhou.myqcloud.com/audio/2170340993.mp3">
 		</audio>
     <script>
-      var video=document.getElementById('bgvid');
-      video.addEventListener("timeupdate",function(){
-      document.getElementById('audio').play()})
+      document.addEventListener("click",function(){document.getElementById('audio').play()});
 		</script>
 # CDN
 # Don't modify the following settings unless you know how they work
