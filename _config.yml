@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://lucaslyf.gitee.io/533933/
+url: https://lucaslyf.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -109,7 +109,7 @@ encrypt: # hexo-blog-encrypt
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@gitee.com:lucaslyf/533933.git
+  repo: https://github.com/LucasLYF/LucasLYF.github.io
   branch: master
 
 search:
