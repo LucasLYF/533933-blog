@@ -29,6 +29,9 @@
                 (function(){
                     var p = i;
                     videos[p].addEventListener('play',function(){
+                        if(videos[p].id!="bgvid"){
+                            document.getElementById('bgm').pause();
+                        }
                         pauseAll(p);
                     })
                 })()
