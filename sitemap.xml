@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lucaslyf.github.io/2023/02/09/2023_5/</loc>
+    
+    <lastmod>2024-02-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lucaslyf.github.io/2023/02/15/2022_1/</loc>
     
     <lastmod>2024-02-09</lastmod>
@@ -48,14 +55,14 @@
   </url>
   
   <url>
-    <loc>https://lucaslyf.github.io/categories/Test/</loc>
+    <loc>https://lucaslyf.github.io/categories/%E4%B8%B9%E9%A3%9E%E6%B8%B8%E8%AE%B0/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lucaslyf.github.io/categories/%E4%B8%B9%E9%A3%9E%E6%B8%B8%E8%AE%B0/</loc>
+    <loc>https://lucaslyf.github.io/categories/Test/</loc>
     <lastmod>2024-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
